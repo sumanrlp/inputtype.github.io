@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS concept</title>
+        <style>
+            #main {
+                height: 30vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #container {
+                height: 10vw;
+                width: 25vw;
+                background-color: cadetblue;
+                border-radius: 3px;
+                box-shadow: 0 0 5px black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            button:hover {
+                background-color: chocolate;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="container">
+                <button id="btn" style="margin-bottom: 15px; border-radius: 3px; border: none; box-shadow: 0 0 3px black;">Click here to enter your name</button>
+                <input style="border-radius: 3px; border: none;" id="in" type="text">
+            </div>
+        </div>
+
+
+        <script>
+            var clk = document.getElementById('btn')
+            var input = document.getElementById('in')
+            clk.addEventListener('click' , fun)
+
+            function fun() {
+                var name = prompt("Enter your name", "Rushikesh")
+                input.value = name
+            }
+        </script>
+    </body>
+</html>
